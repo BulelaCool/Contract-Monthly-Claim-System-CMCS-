@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";  // Assuming you're using a shared layout
+}
+
+<div class="header-image">
+    <img src="~/images/business-people-working.jpg" alt="Business Team Working" />
+</div>
+
+<div class="form-container">
+    <h1>Submit Your Claim</h1>
+
+    <form method="get" action="/Home/SubmitClaim">
+        <div class="form-group">
+            <label for="LecturerName">Lecturer Name:</label>
+            <input type="text" id="LecturerName" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="HoursWorked">Hours Worked:</label>
+            <input type="number" id="HoursWorked" placeholder="Enter hours worked" required />
+        </div>
+
+        <div class="form-group">
+            <label for="HourlyRate">Hourly Rate:</label>
+            <input type="text" id="HourlyRate" value="$40" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="TotalAmount">Total Amount:</label>
+            <input type="text" id="TotalAmount" value="(Auto-calculated)" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="SupportingDocuments">Upload Supporting Documents:</label>
+            <input type="file" id="SupportingDocuments" />
+        </div>
+
+        <button class="submit-button" onclick="window.location.href='@Url.Action("SubmitClaim", "Home")'">
+            Submit Form
+        </button>
+
+        <style>
+   .submit-button {
+      background-color: #6C63FF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+   }
+
+   .submit-button:hover {
+      transform: scale(1.05);
+      background-color: #5548d9;
+   }
+</style>
+    </form>
+</div>
+
+<div class="footer-image">
+    <img src="~/images/481_SkVNQSBHRVIgNzk1LTA5.jpg" alt="Professional Business Team" />
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";  
+}
+
+<div class="header-image">
+    <img src="~/images/360_F_307113926_3crE8AASXv75RTQoGDsbkgc6DanA9Ba2.jpg" alt="People working together" class="centered-image">
+</div>
+
+<div class="dashboard">
+    <h1>Welcome, Megan</h1>
+
+    <p>Your hourly rate: <strong>$40</strong></p>
+
+    <h2>Your Claims:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Claim ID</th>
+                <th>Hours Worked</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Date Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>35</td>
+                <td>$1,400</td>
+                <td>Pending</td>
+                <td>2024-09-01</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>40</td>
+                <td>$1,600</td>
+                <td>Approved</td>
+                <td>2024-08-01</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>30</td>
+                <td>$1,200</td>
+                <td>Rejected</td>
+                <td>2024-07-01</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/Home/Index"><button>Submit a New Claim</button></a>
+</div>
